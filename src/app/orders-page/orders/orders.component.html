@@ -1,0 +1,30 @@
+<div class="card">
+  <div class="card-body">
+    <div class="d-flex justify-content-between">
+      <h5 class="card-title font-weight-bold mb-4" translate>orders List</h5>
+    </div>
+
+    <table class="table table-borderless table-hover table-striped mt-3">
+      <thead>
+        <tr>
+          <th translate class="text-center">Customer Name</th>
+          <th translate class="text-center">Customer Adress</th>
+          <th translate class="text-center">Order Total Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of ordersData" class="row-content-middle">
+          <td class="text-center">
+            {{ item?.customerName }}
+          </td>
+          <td class="text-center">
+            {{ item.customerAdress }}
+          </td>
+          <td class="text-center">
+            <span class="text-black">{{ item?.orderTotalAmount }}</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "my-project-d35ef": {
+      "hosting": {
+        "my-project": [
+          "my-project-d35ef"
+        ]
+      }
+    }
+  }
+}
