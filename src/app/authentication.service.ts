@@ -20,14 +20,14 @@ export class AuthenticationService {
   }
 
   // Sign in with email/password
-  // SignIn(email, password) {
-  //   return this.afAuth
-  //     .signInWithEmailAndPassword(email, password)
-  //     .then((result) => {
-  //       this._router.navigate(['orders']);
-  //     })
-  //     .catch((error) => {
-  //       window.alert(error.message);
-  //     });
-  // }
+  SignIn(email, password) {
+    return this.afAuth
+      .signInWithEmailAndPassword(email, password)
+      .then((result) => {
+        this._router.navigate(['orders']);
+      })
+      .catch((error) => {
+        window.alert(error.message);
+      });
+  }
 }

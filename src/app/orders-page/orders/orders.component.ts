@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CrudService } from 'src/app/services/crud-service.service';
-
+import { Observable } from 'rxjs';
+import { AngularFireDatabase } from '@angular/fire/database';
 @Component({
   selector: 'app-orders',
   templateUrl: './orders.component.html',
@@ -8,11 +9,14 @@ import { CrudService } from 'src/app/services/crud-service.service';
 })
 export class OrdersComponent implements OnInit {
   ordersData: any[] = [];
-  constructor(public crudService: CrudService) {}
+  items: Observable<any[]>;
+
+  constructor(db: AngularFireDatabase) {
+    this.items = db.list('orders').valueChanges();
+    console.log(this.items);
+  }
 
   ngOnInit() {
-    let s = this.crudService.GetordersDataList();
-
     this.ordersData = [
       {
         orderID: 1,

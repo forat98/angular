@@ -14,6 +14,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { CrudService } from './services/crud-service.service';
+import { SignUpComponent } from './sign-Up/sign-Up/sign-Up.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { CrudService } from './services/crud-service.service';
     SignInComponent,
     NavHeaderComponent,
     OrdersComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
